@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte de Incidencias</title>
+</head>
+<body>
+
+    <header>
+        <h1>Reporte de Incidencias - SENA</h1>
+        <!-- Menú de navegación para mantener la navegabilidad -->
+        <nav>
+            <ul>
+               
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo de Árboles</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="reporte.html">Reportar Novedad</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 1. Preparación y Política de Datos -->
+        <section>
+            <h2>Aviso de Privacidad</h2>
+            <p>La información suministrada en este formulario será utilizada únicamente para gestionar las incidencias reportadas en el entorno de formación. Sus datos están protegidos.</p>
+        </section>
+
+        <!-- 2. Detalles del Reporte -->
+        <section>
+            <h2>Detalles del Reporte</h2>
+            
+            <form action="#" method="POST">
+                
+                <!-- Campo de Texto Básico -->
+                <label for="nombreCompleto">Nombre del Aprendiz:</label>
+                <input type="text" id="nombreCompleto" name="nombreCompleto" required>
+                <br><br>
+
+                <!-- Lista Desplegable (ComboBox) -->
+                <label for="tipoNovedad">Tipo de Novedad:</label>
+                <select id="tipoNovedad" name="tipoNovedad" required>
+                    <option value="">Seleccione una categoría...</option>
+                    <option value="hardware">Daño en equipo de cómputo</option>
+                    <option value="software">Falla de software o red</option>
+                    <option value="infraestructura">Daño en mobiliario o electricidad</option>
+                </select>
+                <br><br>
+
+                <!-- 3. Elementos Complejos: Listas de Chequeo -->
+                <fieldset>
+                    <legend>Elementos específicos afectados:</legend>
+                    
+                    <input type="checkbox" id="afectaMonitor" name="afectados" value="monitor">
+                    <label for="afectaMonitor">Monitor o Pantalla</label><br>
+
+                    <input type="checkbox" id="afectaTeclado" name="afectados" value="teclado">
+                    <label for="afectaTeclado">Teclado o Mouse</label><br>
+
+                    <input type="checkbox" id="afectaTorre" name="afectados" value="torre">
+                    <label for="afectaTorre">Torre / CPU</label>
+                </fieldset>
+                <br>
+
+                <!-- Área de texto -->
+                <label for="descripcion">Descripción detallada de la falla:</label><br>
+                <textarea id="descripcion" name="descripcion" rows="4" placeholder="Ej: El equipo de la mesa 3 no enciende..." required></textarea>
+                <br><br>
+
+                <!-- 4. Carga de Archivos -->
+                <label for="evidencia">Subir fotografía (evidencia):</label>
+                <input type="file" id="evidencia" name="evidencia" accept="image/*">
+                <br><br>
+
+                <!-- Botón de envío -->
+                <button type="submit">Enviar Reporte</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 - Proyecto SENA</p>
+    </footer>
+
+</body>
+</html>
